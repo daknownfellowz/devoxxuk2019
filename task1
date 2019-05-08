@@ -1,0 +1,49 @@
+Test 1:  annual gross salary of £24,000.00
+- AssertNationalInsuranceContributionsFor24000(24000, 159.40)
+- AssetTaxableIncome(24000, 916.67)
+
+// Given
+SalarySlip salaryresult = new SalarySlip();
+
+// When
+SalarySlip salaryresult = salarySlipTest.getValue(24000);
+
+// Then
+assertNotNull(salaryresult);
+assertTrue(salaryresult.getValue.equals(216.67));
+assertNull(salaryresult...);
+
+
+Test 2: annual salary > 100 000
+- AssertNationalInsuranceContributionsFor(101000, ??)
+- AssetTaxableIncome(???, ????)
+
+// Given
+SalarySlip salaryresult = new SalarySlip();
+
+// When
+SalarySlip salaryresult = salarySlipTest.getValue(101000);
+
+// Then
+assertNotNull(salaryresult);
+assertTrue(salaryresult.getValue.equals(???));
+assertNull(salaryresult...);
+
+
+CODE DRAFT
+public SalarySlip generateFor(Employee employeeWithSalary24000) {
+
+        double maximumSalary = 100 000;
+        double taxPercentageWhenUnder100k = 20;
+
+        SalarySlip response = new SalarySlip();
+        SalarySlip.setTaxPayable(true);
+
+        if (salary < maximumSalary) {
+            response.setValue(salary - (salary * taxPercentageWhenUnder100k) );
+            return response;
+        }
+        if (salary >  maximumSalary) {
+            //response.setValue(salary - (salary * taxPercentageWhenUnder100k) );
+            return response;
+
