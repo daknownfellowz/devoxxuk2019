@@ -3,7 +3,7 @@ Test 1:  annual gross salary of £24,000.00
 - AssetTaxableIncome(24000, 916.67)
 
 // Given
-SalarySlip salaryresult = new SalarySlip();
+SalarySlip salaryresult = new SalarySlip();  
 
 // When
 SalarySlip salaryresult = salarySlipTest.getValue(24000);
@@ -34,7 +34,7 @@ CODE DRAFT
 public SalarySlip generateFor(Employee employeeWithSalary24000) {
 
         double maximumSalary = 100 000;
-        double taxPercentageWhenUnder100k = 20;
+        double taxPercentageWhenUnder100k = 20;  // TODO: remove percentage useless
 
         SalarySlip response = new SalarySlip();
         SalarySlip.setTaxPayable(true);
