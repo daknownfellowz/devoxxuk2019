@@ -1,12 +1,11 @@
-Test 1:  annual gross salary of £24,000.00
-- AssertNationalInsuranceContributionsFor24000(24000, 159.40)
-- AssetTaxableIncome(24000, 916.67)
+TASK 1:  annual gross salary of £24,000.00
+
 
 // Given
 SalarySlip salaryresult = new SalarySlip();  
 
 // When
-SalarySlip salaryresult = salarySlipTest.getValue(24000);
+SalarySlip salaryresult = salarySlipTest.getSalarySlip(24000);
 
 // Then
 assertNotNull(salaryresult);
@@ -14,7 +13,11 @@ assertTrue(salaryresult.getValue.equals(216.67));
 assertNull(salaryresult...);
 
 
-Test 2: annual salary > 100 000
+
+TASK 3: annual salary = 45 000
+
+
+TASK 3: annual salary > 100 000
 - AssertNationalInsuranceContributionsFor(101000, ??)
 - AssetTaxableIncome(???, ????)
 
@@ -22,11 +25,11 @@ Test 2: annual salary > 100 000
 SalarySlip salaryresult = new SalarySlip();
 
 // When
-SalarySlip salaryresult = salarySlipTest.getValue(101000);
+SalarySlip salaryresult = salarySlipTest.getSalarySlip(101000);
 
 // Then
 assertNotNull(salaryresult);
-assertTrue(salaryresult.getValue.equals(???));
+assertTrue(salaryresult.getSalarySlip.getTAxPayable().equals(xxx));
 assertNull(salaryresult...);
 
 
@@ -46,4 +49,18 @@ public SalarySlip generateFor(Employee employeeWithSalary24000) {
         if (salary >  maximumSalary) {
             //response.setValue(salary - (salary * taxPercentageWhenUnder100k) );
             return response;
+        }
+
+        public void getSalarySlip(double salary) {
+
+            // special case over 100 000
+            if (salary > 100000) {
+
+                double salary
+
+            } else {
+
+            }
+
+        }
 
